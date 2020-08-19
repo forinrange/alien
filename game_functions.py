@@ -1,8 +1,6 @@
 import sys
 import pygame
 
-
-
 from bullet import Bullet
 from enemy import Enemy
 from time import sleep
@@ -30,7 +28,7 @@ def create_enemy(ai_settings, screen, enemys, enemy_namber, row_namber):
     enemy.rect.x = enemy.x
     enemy.rect.y = enemy.rect.height + 2 * enemy.rect.height * row_namber
     enemys.add(enemy)
-    
+
 
 def create_fleet(ai_settings, screen, ship, enemys):
     """Создает флот пришельцев."""
@@ -141,11 +139,9 @@ def update_bullets(ai_settings, screen, stats, sb, ship, enemys, bullets):
 def check_bullet_enemy_collisions(ai_settings, screen, stats, sb, ship, enemys, bullets):
     """Обработка коллизий пуль с пришельцами."""
 
-
-
     # Удаление пуль и пришельцев, участвующих в колизиях.
     collisions = pygame.sprite.groupcollide(bullets, enemys, True, True)
-    
+
     if collisions:
 
         for enemys in collisions.values():

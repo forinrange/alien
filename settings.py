@@ -17,7 +17,7 @@ class Settings():
 		# self.bullet_width = 5
 		# self.bullet_height = 10
 		#self.bullet_color = (255,69,0)
-		self.bullets_allowed = 3
+		self.bullets_allowed = 20
 		# Настройка пришельцев
 		self.enemy_speed_factor = 4
 		self.fleet_drop_speed = 7
